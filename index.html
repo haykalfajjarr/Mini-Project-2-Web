@@ -30,7 +30,7 @@
             <a class="nav-link" href="#certificate">Certificate</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Social">Social</a>
+            <a class="nav-link" href="#contact-form">Contact</a>
           </li>
         </ul>
         <button id="toggle-mode" class="btn btn-outline-light">Dark Mode</button>
@@ -105,45 +105,46 @@
       </div>  
 
       <div id="certificate" class="certificate-container">
-        <div class="certificate-title">
-          <h1>Certificate</h1>
-        </div>
-        <div class="certificate-card">
-          <div class="certificate-preview">
-            <img
-              src="img/sertif 1.jpg"
-              alt="Certificate 1 Preview"
-              class="certificate-image"
-            />
+        <div class="certificate-wrapper">
+          <div class="certificate-title">
+            <h1>Certificate</h1>
           </div>
-          <div class="certificate-preview">
-            <img
-              src="img/sertif 3.jpg"
-              alt="sertif 2 Preview"
-              class="certificate-image"
-            />
-          </div>
-          <div class="certificate-preview">
-            <img src="img/sertif 2.png"" alt="sertif 3 Preview"
-            class="certificate-image">
+          <div class="certificate-card">
+            <div class="certificate-preview">
+              <img src="img/sertif 1.jpg" alt="Certificate 1 Preview" class="certificate-image" />
+            </div>
+            <div class="certificate-preview">
+              <img src="img/sertif 3.jpg" alt="sertif 2 Preview" class="certificate-image" />
+            </div>
+            <div class="certificate-preview">
+              <img src="img/sertif 2.png" alt="sertif 3 Preview" class="certificate-image">
+            </div>
           </div>
         </div>
       </div>
     </main>
 
+    <div class="container">
+      <div id="contact-form" class="contact-form">
+          <h2>Contact Me</h2>
+          <form id="myForm" action="#" method="post">
+              <input type="text" name="name" id="name" placeholder="Your Name" required>
+              <input type="email" name="email" id="email" placeholder="Your Email" required>
+              <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+              <input type="submit" value="Send Message">
+          </form>
+      </div>
+  </div>
+  
+
     <footer>
       <p>Copyright &copy; 2024 - M. Haykal Fajjar Aulia</p>
       <div class="contact">
-        <h2>Contact Me</h2>
+        <h2>Or Contact Me Through Another Platform</h2>
         <ul class="social-media-links">
           <li>
             <a href="mailto:haykalfajjar3@gmail.com"
               ><img src="img/gmailgg.png" alt="Gmail"
-            /></a>
-          </li>
-          <li>
-            <a href="https://wa.me/089690704288"
-              ><img src="img/wagg.png" alt="WhatsApp"
             /></a>
           </li>
           <li>
@@ -159,6 +160,9 @@
         </ul>
       </div>
     </footer>
+    
+    <script src="Js/form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="Js/skillbar.js"></script>

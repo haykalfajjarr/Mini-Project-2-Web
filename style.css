@@ -179,8 +179,8 @@ header p {
 }
 
 .navbar-nav .nav-link:hover {
-  color: #6f65f8;
-  border-color: #6f65f8;
+  color: #4958cc;
+  border-color: #4958cc;
   border-radius: 10PX;
   background-color: rgba(111, 102, 248, 0.2);
 }
@@ -209,7 +209,17 @@ header p {
 }
 
 #toggle-mode {
-  font-size: 1.2rem;
+  border-color: #4958cc;
+  color: #000;
+  background-color: #f0f2ff;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+#toggle-mode:hover {
+  background-color: #0000;
+  border-color: #a705ff;
+  color: #a705ff; 
+  font-weight: bold;
 }
 
 .box {
@@ -235,8 +245,17 @@ header p {
 }
 
 .dark-mode #toggle-mode {
+  background-color: #000;
   border-color: #a705ff;
   color: #fff;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.dark-mode #toggle-mode:hover {
+  background-color: #ffffff;
+  border-color: #4958cc;
+  color: #4958cc; 
+  font-weight: bold;
 }
 
 .dark-mode .box {
@@ -426,58 +445,169 @@ main {
   background-color: #d35bff; /* Mengubah warna saat dihover */
 }
 
-  .certificate-container {
-    margin-top: 70px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; 
-    margin-bottom: 100px;
+#certificate {
+  margin-top: 50vh;
+  background-color: #4958cc;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px 10px #454e86;
+  padding: 20px;
+  margin-bottom: 50vh;
+}
+
+.dark-mode #certificate {
+  margin-top: 50vh;
+  background-color: #6b006f;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px 10px #7d27d8;
+  padding: 20px;
+  margin-bottom: 50vh;
 }
 
 .certificate-title {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.certificate-container .certificate-card {
   display: flex;
+  justify-content: center;
+  padding: 5px 10px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(to right, #8495fe, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #ffffff, #8495fe);
+  border: 2px solid #8495fe;
 }
 
-.certificate-title h1 {
-    font-size: 40px;
-    background-color: #000;
-    margin: 20px 20px;
-    color: #fff;
-    border-radius: 10px;
-    padding: 20px 0px;
-    margin-bottom: 20px;
+.dark-mode .certificate-title {
+  display: flex;
+  justify-content: center;
+  padding: 5px 10px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(to right, #7d27d8, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #ffffff, #7d27d8);
+  border: 2px solid #7d27d8;
+}
+
+.certificate-card {
+  display: flex;
+  justify-content: center;
 }
 
 .certificate-preview {
-    width: 30%;
-    height: auto; 
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s ease;
-    margin: 1rem; 
+  width: 30%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+  margin: 1rem;
 }
 
 .certificate-preview:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .certificate-image {
-    width: 70%;
-    height: 100%; 
-    object-fit: contain;
-    transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
 }
 
-.certificate-preview:hover .certificate-image {
-    transform: scale(1.1);
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-radius: 20px;
+  background-image: url('img/form.gif');
+  background-size: cover;
 }
 
+.contact-form {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #4958cc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #05169b;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .container {
+  background-image: url('img/form1.gif');
+}
+
+.dark-mode .contact-form {
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .contact-form input[type="text"],
+.dark-mode .contact-form input[type="email"],
+.dark-mode .contact-form textarea {
+  border: 1px solid #999;
+}
+
+.dark-mode .contact-form input[type="submit"] {
+  background-color: #6b006f;
+}
+
+.dark-mode .contact-form input[type="submit"]:hover {
+  background-color: #7d27d8;
+}
 
 footer {
     margin-top: 30px;
@@ -553,9 +683,36 @@ footer a {
 
 .contact p {
     font-size: 16px;
-    color: #333;
+    color: #f4f4f4;
     margin-top: 20px;
 }
+
+.dark-mode footer {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-mode .contact {
+  background-color: #fbfbfb;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .contact h2 {
+  color: #000000;
+}
+
+.dark-mode .social-media-links a {
+  background-color: #9f1d94;
+}
+
+.dark-mode .social-media-links a:hover {
+  background-color: #453244;
+}
+
+.dark-mode .contact p {
+  color: #000000;
+}
+
 
 @media screen and (max-width: 600px) {
     body {
